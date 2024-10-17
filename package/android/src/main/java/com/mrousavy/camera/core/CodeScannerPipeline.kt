@@ -52,6 +52,10 @@ class CodeScannerPipeline(val configuration: CameraConfiguration.CodeScanner, va
     }
   }
 
+  override fun getDefaultTargetResolution(): Size {
+      return Size(2000, 2000);
+  }
+
   override fun close() {
     scanner.close()
   }
